@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3901BE2C29962000DFA7AF /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3901BD2C29962000DFA7AF /* FoodView.swift */; };
 		CE673A852C206233008D2C5F /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673A842C206233008D2C5F /* Food.swift */; };
 		CE673A872C2063E6008D2C5F /* FoodPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673A862C2063E6008D2C5F /* FoodPreview.swift */; };
 		CE673A892C2069A2008D2C5F /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673A882C2069A2008D2C5F /* RestaurantView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3901BD2C29962000DFA7AF /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		CE673A842C206233008D2C5F /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		CE673A862C2063E6008D2C5F /* FoodPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreview.swift; sourceTree = "<group>"; };
 		CE673A882C2069A2008D2C5F /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				CE673A8A2C2069D4008D2C5F /* Restaurant.swift */,
 				CE71CDCF2C27F8BC003CB15C /* Navigation.swift */,
 				CE71CDD32C27FFC0003CB15C /* Ingredient.swift */,
+				CE3901BD2C29962000DFA7AF /* FoodView.swift */,
 			);
 			path = "Deliver fly";
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				CE689BA02C1EC05500BE925F /* HomeView.swift in Sources */,
 				CE689BA22C1EC66400BE925F /* RestaurantPreview.swift in Sources */,
 				CE71CDD42C27FFC0003CB15C /* Ingredient.swift in Sources */,
+				CE3901BE2C29962000DFA7AF /* FoodView.swift in Sources */,
 				CE673A852C206233008D2C5F /* Food.swift in Sources */,
 				CE689B8F2C1EB2F800BE925F /* Deliver_flyApp.swift in Sources */,
 				CE673A8B2C2069D4008D2C5F /* Restaurant.swift in Sources */,

@@ -11,7 +11,7 @@ struct RestaurantView: View {
     let restaurant: Restaurant
     @State private var selectedFood: Food?
     @EnvironmentObject private var navigation: Navigation
-        
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading){
@@ -60,6 +60,16 @@ struct RestaurantView: View {
             }
             .padding(.horizontal)
         }
+        .sheet(item: $selectedFood) { item in
+            foodView(item)
+        }
+    }
+    
+    @ViewBuilder func foodView(_ item: Food) -> some View {
+        FoodView(food: item)
+            .presentationDetents(item.ingredients.isEmpty ? [.fraction(0.63)] : [.fraction(0.93)])
+            .presentationDragIndicator(.visible)
+            .presentationCornerRadius(30)
     }
 }
 

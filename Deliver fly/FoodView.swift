@@ -30,6 +30,16 @@ struct FoodView: View {
                 }
                 .padding()
             }
+            Group {
+                Divider()
+                HStack {
+                    totalPrice
+                    Spacer()
+                    itemQuantity
+                }
+                addToCart
+            }
+            .padding(.horizontal)
         }
     }
     
@@ -105,8 +115,71 @@ struct FoodView: View {
         }
     }
     
-}
+    var totalPrice: some View {
+        Text(total, format: .currency(code: "USD"))
+            .font(.title)
+            .fontWeight(.medium)
+            .padding(.vertical, 10)
+    }
     
+    var itemQuantity: some View {
+        Group {
+            Button(action: {
+                minusTapped()
+            }, label: {
+                Text("-")
+                    .bold()
+                    .foregroundStyle(.darkGray)
+                    .frame(width: 25, height: 25)
+                    .background(.lightGray)
+                    .clipShape(Circle())
+            })
+            Text("\(quantity)")
+                .bold()
+                .padding(.horizontal)
+            Button(action: {
+                plusTapped()
+            }, label: {
+                Text("+")
+                    .bold()
+                    .foregroundStyle(.darkGray)
+                    .frame(width: 25, height: 25)
+                    .background(.lightGray)
+                    .clipShape(Circle())
+            })
+        }
+    }
+    
+    func minusTapped(){
+        if quantity > 0 {
+            quantity -= 1
+        }
+    }
+    
+    func plusTapped(){
+        if quantity < 10 {
+            quantity += 1
+        }
+    }
+    
+    var addToCart: some View {
+        Button(action: {
+            dismiss()
+        }, label: {
+            Text("Add to Cart".uppercased())
+                .bold()
+                .frame(maxWidth: .infinity, minHeight: 60)
+                .foregroundStyle(quantity == 0 ? .gray : .white)
+                .background(quantity == 0 ? .lightGray :
+                        .darkOrange)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+        })
+        .disabled(quantity == 0)
+    }
+    
+}
+
+
 #Preview {
     FoodView(food: .doubleDouble)
 }
